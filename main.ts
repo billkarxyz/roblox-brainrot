@@ -1,10 +1,16 @@
-// A working roblox-brainrot-01 entry (Node 22, standard library only): the game is this directory's Rojo
-// project, built into game.rbxl with `rojo build default.project.json --output game.rbxl`, and the program
-// hands it in. It copies game.rbxl, src/, screenshots/ and PLAY.json from beside this file to /output and
-// writes /output/dossier.json, the summary the judge reads, with the vendored make.fun library. A starting
-// point, not a winner: it is a grey square that moves with the arrow keys. Build your game, rebuild
-// game.rbxl, put your PNG or JPEG screenshots in screenshots/ (the first by name is the cover, and one of
-// them is the thumbnail you upload for your game on Roblox) and fill in PLAY.json with your published place.
+// Brainrot Bazaar: a roblox-brainrot-01 entry (Node 22, standard library only).
+// The game is this directory's Rojo project, built into game.rbxl with
+// `rojo build default.project.json --output game.rbxl`, and this program
+// hands it in. It copies game.rbxl, src/, screenshots/ and PLAY.json from
+// beside this file to /output and writes /output/dossier.json, the summary
+// the judge reads, with the vendored make.fun library.
+//
+// The game itself is a 3D brainrot game in the Steal a Brainrot genre: an
+// Indonesian street-food cast of twelve absurd characters walks a conveyor
+// belt through a bazaar the server scripts build from Parts at runtime.
+// Players buy brainrots, park them on their base plots to earn cash per
+// second, steal from each other under a base-lock defence, dodge Durian
+// Storms, and rebirth for permanent income multipliers.
 //
 // Every name under /output starts with a letter, a digit or _ and holds only letters, digits, . _ and -: the
 // grader fails an entry whose output holds any other, so a file such as .gitkeep or .DS_Store copied in fails it.
@@ -29,6 +35,9 @@ copyFileSync(join(here, 'PLAY.json'), join(out, 'PLAY.json'));
 cpSync(join(here, 'src'), join(out, 'src'), { recursive: true, filter: notDotted });
 mkdirSync(join(out, 'screenshots'), { recursive: true });
 if (existsSync(join(here, 'screenshots'))) cpSync(join(here, 'screenshots'), join(out, 'screenshots'), { recursive: true, filter: notDotted });
+
+// Brainrot Bazaar: the handover is done when the dossier below is written.
+console.log('Brainrot Bazaar: game.rbxl, src/, screenshots/ and PLAY.json copied to output.');
 
 // The scorer's own caps (reference/gate.json): only text_max_bytes shapes the bytes; the others refuse an entry the
 // scorer would refuse (more than 4 screenshots or one over 256 KiB; a place of more than 500000 instances, whose

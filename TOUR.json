@@ -1,1 +1,1 @@
-{"tour": 1, "steps": [{"screenshot": "1-start.png"}, {"screenshot": "2-play.png", "keys": ["Right"], "wait_ms": 1000}, {"screenshot": "3-end.png", "keys": ["Down"], "wait_ms": 1000}]}
+{"steps":[{"keys":[],"screenshot":"1-cover.jpg","wait_ms":1500},{"keys":["W"],"screenshot":"2-buy.jpg","wait_ms":2000},{"keys":["W"],"screenshot":"3-base.jpg","wait_ms":2000},{"call":{"arg":"storm","fn":"triggerDurianStorm","module":"ServerScriptService.Server.EventSystem","on":"Server"},"keys":[],"screenshot":"4-storm.jpg","wait_ms":500}],"tour":1}
